@@ -1,2 +1,2 @@
-# goit-markup-hw-06
-This is my sixth homework
+# food-delivery-service
+My website of food delivery service
