@@ -98,6 +98,7 @@
       <!-- Special section -->
       <section class="special">
         <div class="container">
+          <div class="apple-container">
           <img
                 class="special-img"
                 src="./images/apple@1x.png"
@@ -119,6 +120,7 @@
     </defs>
     <ellipse cx="100" cy="30" rx="100" ry="20" fill="url(#shadow-gradient)" />
                 </svg>
+                </div>
           <h2 class="special-title">What’s Special About Our Offerings</h2>
           <p class="special-text">
             With our platform, you can browse through a diverse selection of
@@ -249,8 +251,10 @@
                   width="48"
                   height="48"
                 />
+                <div class="profile-info">
                 <h3 class="profile-title">Daniel Smith</h3>
                 <p class="profile-text">Some Dude</p>
+                </div>
                 <div class="reviews-divider"></div>
               </div>
 
@@ -286,8 +290,10 @@
                   width="48"
                   height="48"
                 />
+                <div class="profile-info">
                 <h3 class="profile-title">Eva Morin</h3>
                 <p class="profile-text">Some Dude</p>
+                </div>
                 <div class="reviews-divider"></div>
               </div>
         </div>
@@ -296,12 +302,23 @@
       <!-- Subscribe section -->
        <section class="subscribe">
         <div class="container">
+          <img
+                class="subscribe-img"
+                src="./images/banana@1x.png"
+                srcset="
+                  ./images/banana@1x.png 1x,
+                  ./images/banana@2x.png 2x
+                "
+                alt="Banana"
+                width="280"
+                height="78"
+              />
           <h2 class="subscribe-title">Subscribe To Get Special Offers</h2>
           <p class="subscribe-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim 
 in eros elementum tristique.
           </p>
-          <div class="subscribe-input"></div>
+          <div class="subscribe-input">
           <form class="email-form">
             <label class="email-label">
               <input
@@ -315,29 +332,32 @@ in eros elementum tristique.
               Subscribe
             </button>
           </form>
+          </div>
     </main>
 
       <!-- Footer -->
     <footer class="foot">
       <div class="container">
+        <div class="foot-info">
         <div class="foot-logo">
-          <svg class="logo" width="51" height="51">
+          <svg class="logo" width="69" height="51">
             <use href="./images/icons.svg#icon-logo"></use>
             <a href="#"></a>
           </svg>
         </div>
         <div class="foot-menu">
           <ul class="foot-list">
-            <li><a href="./index.html" class="nav-link">Home</a></li>
-            <li><a href="" class="nav-link">About</a></li>
-            <li><a href="" class="nav-link">Service</a></li>
-            <li><a href="" class="nav-link">Menu</a></li>
-            <li><a href="" class="nav-link">Contact</a></li>
+            <li><a href="./index.html" class="foot-nav">Home</a></li>
+            <li><a href="" class="foot-nav">About</a></li>
+            <li><a href="" class="foot-nav">Service</a></li>
+            <li><a href="" class="foot-nav">Menu</a></li>
+            <li><a href="" class="foot-nav">Contact</a></li>
           </ul>
+        </div>
         </div>
         <div class="subscribe">
           <p class="foot-subscribe">Subscribe</p>
-          <form class="email-form">
+          <form class="foot-email-form">
             <label class="email-label">
               <input
                 class="form-input"
@@ -346,28 +366,29 @@ in eros elementum tristique.
                 placeholder="Enter your email"
               />
             </label>
-            <button class="form-button" type="submit">
+            <button class="foot-form-button" type="submit">
               Subscribe
             </button>
           </form>
         </div>
         <div class="privacy">
-          <label class="checkbox-label" for="user-privacy">
-              <span>
+          <div class="privacy-sentence">
+              <span class="foot-privacy">
                 By subscribing you agree to with our
                 <a href="#" class="policy">Privacy Policy</a>
               </span>
-              <div class="link">
-              <a href="">Privacy Policy</a>
-              <a href="">Terms of Service</a>
-              <a href="">Cookies Settings</a>
+              </div>
+              <div class="foot-link">
+              <a class="foot-link-item" href="">Privacy Policy</a>
+              <a class="foot-link-item" href="">Terms of Service</a>
+              <a class="foot-link-item" href="">Cookies Settings</a>
 </div>
-            </label>
         </div>
-        <p class="foot-rights">2022 FoodSta. All right reserved.</p>
+        <p class="foot-rights">2024 FoodSta. All right reserved.</p>
       </div>
     </footer>
 
+    <!-- Order Form 
     <div class="modal-overlay" data-modal="modal1">
       <div class="modal">
         <button class="modal-close" type="button" data-modal-close="modal1">
@@ -389,7 +410,6 @@ in eros elementum tristique.
                 required
               />
             </div>
-
           </div>
           <div class="modal-info">
             <label class="modal-label" for="user-phone">Phone number</label>
@@ -402,7 +422,6 @@ in eros elementum tristique.
                 placeholder="+38(099)444 22 11"
                 required
               />
-
             </div>
           </div>
           <div class="modal-info">
