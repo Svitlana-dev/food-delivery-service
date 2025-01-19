@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FoodDelivery</title>
     <link
@@ -15,6 +16,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/modal.js" defer></script>
   </head>
 
   <body>
@@ -37,8 +39,8 @@
         </nav>
 
         <button class="open-menu" type="button" data-modal-open="modal2">
-          <svg class="icon-menu" width="24" height="18">
-            <use href="./images/icons.svg#icon-menu"></use>
+          <svg class="icon-menu" width="24" height="18" viewBox="0 0 43 32"> <path d="M.592 3.556a2.073 2.073 0 0 1 2.074-2.074h37.333a2.075 2.075 0 0 1 0 4.148H2.666A2.073 2.073 0 0 1 .592 3.556zm0 12.51a2.073 2.073 0 0 1 2.074-2.074h37.333a2.075 2.075 0 0 1 0 4.148H2.666a2.075 2.075 0 0 1-2.074-2.074zm2.074 10.437a2.073 2.073 0 0 0-1.467 3.541c.389.389.917.607 1.467.607h37.333A2.075 2.075 0 1 0 40 26.503H2.667z"/>
+            
           </svg>
         </button>
       </div>
@@ -54,23 +56,23 @@
           <nav class="mob-nav">
             <ul class="mobile-nav">
               <li class="mobile-list">
-                <a class="mobile-link current" href="./index.html">Home</a>
+                <a class="mobile-link-current" href="./index.html">Home</a>
               </li>
 
               <li class="mobile-list">
-                <a class="mobile-link" href="">About </a>
+                <a class="mobile-link" href="#">About </a>
               </li>
 
               <li class="mobile-list">
-                <a class="mobile-link" href="">Service </a>
+                <a class="mobile-link" href="#">Service </a>
               </li>
 
               <li class="mobile-list">
-                <a class="mobile-link" href="">Menu </a>
+                <a class="mobile-link" href="#">Menu </a>
               </li>
 
               <li class="mobile-list">
-                <a class="mobile-link" href="">Contact </a>
+                <a class="mobile-link" href="#">Contact </a>
               </li>
             </ul>
           </nav>
@@ -98,7 +100,6 @@
       <!-- Special section -->
       <section class="special">
         <div class="container">
-          <div class="apple-container">
           <img
                 class="special-img"
                 src="./images/apple@1x.png"
@@ -107,20 +108,9 @@
                   ./images/apple@2x.png 2x
                 "
                 alt="Apple"
-                width="201"
-                height="255"
+                width="280"
+                height="309"
               />
-              <svg class="icon-shadow" width="156" height="72">
-                  <use href="./images/icons.svg#icon-shadow"></use>
-                  <defs>
-        <radialGradient id="shadow-gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-            <stop offset="0%" stop-color="rgb(47, 88, 63)" />
-            <stop offset="100%" stop-color="rgb(105, 105, 105)" />
-        </radialGradient>
-    </defs>
-    <ellipse cx="100" cy="30" rx="100" ry="20" fill="url(#shadow-gradient)" />
-                </svg>
-                </div>
           <h2 class="special-title">What’s Special About Our Offerings</h2>
           <p class="special-text">
             With our platform, you can browse through a diverse selection of
@@ -156,7 +146,7 @@
             </li>
           </ul>
           <div class="special-row">
-          <button class="special-button" type="button">Order Now</button>
+          <button class="special-button" type="button" data-modal-open="modal1">Order Now</button>
           <a href="#" class="special-more">Read more
             <svg class="icon-right-arrow" width="6" height="10">
                   <use href="./images/icons.svg#icon-right_arrow"></use>
@@ -326,8 +316,11 @@ in eros elementum tristique.
                 type="email"
                 name="user-email"
                 placeholder="Enter your email"
+                pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
+                required
               />
             </label>
+            <p class="error-message">Not a valid email address (example@email.com)</p>
             <button class="form-button" type="submit">
               Subscribe
             </button>
@@ -358,14 +351,24 @@ in eros elementum tristique.
         <div class="subscribe">
           <p class="foot-subscribe">Subscribe</p>
           <form class="foot-email-form">
+            <div class="subscribe-input">
             <label class="email-label">
               <input
                 class="form-input"
                 type="email"
                 name="user-email"
                 placeholder="Enter your email"
+                pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
+                required
               />
             </label>
+            <div class="error-container">
+            <svg class="attention" width="12" height="12">
+            <use href="./images/icons.svg#icon-attention"></use>
+          </svg>
+            <p class="error-message">Not a valid email address (example@email.com)</p>
+            </div>
+            </div>
             <button class="foot-form-button" type="submit">
               Subscribe
             </button>
@@ -388,7 +391,8 @@ in eros elementum tristique.
       </div>
     </footer>
 
-    <!-- Order Form 
+    <!-- Order Form -->
+     
     <div class="modal-overlay" data-modal="modal1">
       <div class="modal">
         <button class="modal-close" type="button" data-modal-close="modal1">
@@ -407,6 +411,7 @@ in eros elementum tristique.
                 type="text"
                 name="user-name"
                 placeholder="Jenny Wilson"
+                 pattern="(([\-a-zA-Z']{2,20})(\s[\-a-zA-Z']{0,20})?)"
                 required
               />
             </div>
@@ -433,15 +438,16 @@ in eros elementum tristique.
                 type="email"
                 name="user-email"
                 placeholder="willie.jennings@example.com"
+                pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
                 required
               />
             </div>
           </div>
           
+          
           <button type="submit" class="submit">Send</button>
         </form>
       </div>
     </div>
-    <script src="./js/modal.js"></script>
   </body>
 </html>

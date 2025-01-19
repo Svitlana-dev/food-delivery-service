@@ -8,17 +8,29 @@
     }
   }
 
-  document.querySelectorAll("[data-modal-open]").forEach(button => {
+  // Відкриття модальних вікон
+  document.querySelectorAll("[data-modal-open]").forEach((button) => {
     button.addEventListener("click", () => {
       const modalId = button.getAttribute("data-modal-open");
       toggleModal(modalId);
     });
   });
 
-  document.querySelectorAll("[data-modal-close]").forEach(button => {
+  // Закриття модальних вікон
+  document.querySelectorAll("[data-modal-close]").forEach((button) => {
     button.addEventListener("click", () => {
       const modalId = button.getAttribute("data-modal-close");
       toggleModal(modalId);
+    });
+  });
+
+  // Закриття модального меню при натисканні на посилання
+  document.querySelectorAll(".mobile-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      const modal = document.querySelector(".mobile-menu.is-open");
+      if (modal) {
+        modal.classList.remove("is-open");
+      }
     });
   });
 })();
